@@ -141,6 +141,51 @@ export function initMotion() {
       onEnter: () => d.classList.add("is-visible"),
     });
   });
+
+  // Why — horizontal pinned scroll (desktop only)
+  const whySection = document.querySelector("[data-why-scroll]");
+  if (whySection && window.matchMedia("(min-width: 901px)").matches) {
+    const slides = whySection.querySelector(".why__slides");
+    if (slides) {
+      const getShift = () => Math.max(0, slides.scrollWidth - window.innerWidth);
+      gsap.to(slides, {
+        x: () => -getShift(),
+        ease: "none",
+        scrollTrigger: {
+          trigger: whySection,
+          pin: true,
+          scrub: 1,
+          start: "top top",
+          end: () => `+=${getShift()}`,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+        },
+      });
+    }
+  }
+
+  // Getting started — sequential card reveal + progress line fill
+  const startPath = document.querySelector("[data-start-path]");
+  if (startPath) {
+    const cards = startPath.querySelectorAll(".start__card");
+    const fill = startPath.querySelector(".start__progress-fill");
+    ScrollTrigger.create({
+      trigger: startPath,
+      start: "top 75%",
+      once: true,
+      onEnter: () => {
+        cards.forEach((c) => c.classList.add("is-active"));
+        if (fill) {
+          gsap.to(fill, {
+            attr: { "stroke-dashoffset": 0 },
+            duration: 1.4,
+            ease: "power2.inOut",
+            delay: 0.15,
+          });
+        }
+      },
+    });
+  }
 }
 
 function buildSpiral(host) {
