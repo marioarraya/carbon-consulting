@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0A0E14" />
+  <title>Contact — Carbon Consulting</title>
+  <meta name="description" content="Tell us what you're working on. We respond within one business day." />
+  <meta property="og:title" content="Contact — Carbon Consulting" />
+  <meta property="og:description" content="Tell us what you're working on." />
+  <meta property="og:image" content="/og-image.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="container nav__inner">
+      <a class="nav__brand" href="/"><span>Carbon Consulting</span><span class="nav__brand-dot"></span></a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--secondary nav__cta" href="/contact.html">
+        <span>Schedule a Consultation</span><span class="btn__arrow"></span>
+      </a>
+      <button class="nav__toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="nav__overlay" data-nav-overlay aria-hidden="true">
+    <div class="nav__overlay-top">
+      <a class="nav__brand" href="/"><span>Carbon Consulting</span><span class="nav__brand-dot"></span></a>
+      <button class="nav__overlay-close" data-nav-close aria-label="Close menu">Close</button>
+    </div>
+    <nav class="nav__overlay-links" aria-label="Mobile">
+      <a href="/"><span>01</span>Home</a>
+      <a href="/services.html"><span>02</span>Services</a>
+      <a href="/about.html"><span>03</span>About</a>
+      <a href="/contact.html" aria-current="page"><span>04</span>Contact</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <div class="stagger">
+          <div class="page-head__eyebrow eyebrow">Contact</div>
+          <h1 class="page-head__title">Let's <span class="em">talk.</span></h1>
+          <p class="page-head__lede">Tell us what you're working on. <strong>We'll respond within one business day.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal>
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <form class="form" data-contact-form novalidate>
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label" for="f-name">Name <span class="required">*</span></label>
+                  <input class="field__input" type="text" id="f-name" name="name" required autocomplete="name" />
+                  <p class="field__error" hidden>Required.</p>
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-company">Company <span class="required">*</span></label>
+                  <input class="field__input" type="text" id="f-company" name="company" required autocomplete="organization" />
+                  <p class="field__error" hidden>Required.</p>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="field">
+                  <label class="field__label" for="f-title">Title</label>
+                  <input class="field__input" type="text" id="f-title" name="title" autocomplete="organization-title" />
+                </div>
+                <div class="field">
+                  <label class="field__label" for="f-email">Email <span class="required">*</span></label>
+                  <input class="field__input" type="email" id="f-email" name="email" required autocomplete="email" />
+                  <p class="field__error" hidden>Required.</p>
+                </div>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-phone">Phone</label>
+                <input class="field__input" type="tel" id="f-phone" name="phone" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-inquiry">How can we help?</label>
+                <select class="field__select" id="f-inquiry" name="inquiry">
+                  <option value="consultation">Schedule a consultation</option>
+                  <option value="strategy">IT strategy &amp; roadmap</option>
+                  <option value="selection">Software &amp; vendor selection</option>
+                  <option value="oversight">Implementation oversight</option>
+                  <option value="governance">IT governance</option>
+                  <option value="consolidation">Vendor consolidation</option>
+                  <option value="audit">Website security audit</option>
+                  <option value="scan">Network port scan</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="field__label" for="f-message">Tell us more</label>
+                <textarea class="field__textarea" id="f-message" name="message" rows="6" placeholder="A few sentences about what you're working on."></textarea>
+              </div>
+              <button class="btn btn--primary form__submit" type="submit">
+                <span>Send</span><span class="btn__arrow"></span>
+              </button>
+            </form>
+
+            <div class="success" data-contact-success hidden tabindex="-1">
+              <h2 class="success__head">Thanks — <em class="em">we've received your message.</em></h2>
+              <p class="success__body">We'll respond within one business day.</p>
+            </div>
+          </div>
+
+          <aside class="direct">
+            <div class="direct__block">
+              <div class="direct__label">Email</div>
+              <div class="direct__value">contact@carbonconsulting.com</div>
+            </div>
+            <div class="direct__block">
+              <div class="direct__label">Response time</div>
+              <div class="direct__value">Within one business day</div>
+            </div>
+            <div class="direct__block">
+              <div class="direct__label">Hours</div>
+              <div class="direct__value">Monday–Friday, 9am–6pm ET</div>
+            </div>
+            <p class="direct__note">Every inquiry — including audits and scans — gets a real written response from a senior consultant. No autoresponders, no sales cadence.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand">Carbon Consulting<span class="footer__brand-dot"></span></div>
+          <div class="footer__tag">Independent IT Advisory &amp; Consulting</div>
+        </div>
+        <div>
+          <div class="footer__col-label">Navigate</div>
+          <div class="footer__col-links">
+            <a href="/services.html">Services</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-label">Contact</div>
+          <div class="footer__contact">
+            contact@carbonconsulting.com<br />
+            <span class="footer__contact-email muted" style="font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase;">Within one business day</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>© 2026 Carbon Consulting. All rights reserved.</div>
+        <div><a href="/services.html">Services</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
