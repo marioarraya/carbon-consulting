@@ -1913,7 +1913,7 @@ body.is-ready { opacity: 1; }
 /* --- Hero v3 --- */
 .hero__inner--v3 { grid-template-columns: 1fr; }
 .hero__inner--v3 .hero__left { max-width: 960px; }
-.hero__title--v3 { font-size: clamp(44px, 7vw, 96px); }
+.hero__title--v3 { font-size: clamp(36px, 5.2vw, 72px); }
 
 /* --- Services grid (home) --- */
 .services-grid { padding: var(--section-y) 0; position: relative; }
