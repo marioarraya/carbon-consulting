@@ -3107,43 +3107,23 @@ body.is-ready { opacity: 1; }
 /* --- Stat suffix --- */
 .result-tile__stat .num { display: inline-block; }
 
-/* --- Hero accent visual (right column) --- */
-.hero__inner--v3.hero__inner--rich { grid-template-columns: 1.4fr 1fr; gap: 64px; }
+/* --- Hero accent visual (right column) — free-floating orb --- */
+.hero__inner--v3.hero__inner--rich { grid-template-columns: 1.3fr 1fr; gap: 48px; }
 .hero__visual {
   position: relative;
-  aspect-ratio: 4 / 5;
-  border: 1px solid var(--hairline-2);
-  overflow: hidden;
+  aspect-ratio: 1 / 1;
   align-self: center;
-  background:
-    radial-gradient(60% 70% at 50% 42%, rgba(180, 58, 46, 0.10), transparent 65%),
-    linear-gradient(180deg, #0c131e 0%, #070b10 100%);
+  background: transparent;
+  border: none;
+  overflow: visible;
 }
 .hero__visual-canvas {
   position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
+  inset: -10%;
+  width: 120%;
+  height: 120%;
   display: block;
 }
-.hero__visual::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1.2px);
-  background-size: 24px 24px;
-  pointer-events: none;
-  z-index: 1;
-}
-.hero__visual::after {
-  content: "";
-  position: absolute; inset: 0;
-  pointer-events: none;
-  z-index: 2;
-  background:
-    radial-gradient(80% 80% at 50% 50%, transparent 40%, rgba(10,14,20,0.45) 100%),
-    linear-gradient(180deg, transparent 70%, rgba(10,14,20,0.7));
-}
-.hero__visual-meta { z-index: 3; }
 .hero__visual-meta {
   position: absolute; left: 20px; bottom: 20px; right: 20px;
   z-index: 2;
