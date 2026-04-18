@@ -1015,13 +1015,13 @@ section { padding-top: var(--section-y); padding-bottom: var(--section-y); posit
   height: 100%;
   object-fit: cover;
   z-index: -2;
-  filter: saturate(0.82) contrast(1.08) brightness(0.92);
-  transform: scale(1.12);
+  filter: saturate(1.4) contrast(1.08);
+  transform: scale(1.08);
   animation: page-head-zoom 22s ease-out forwards;
 }
 @keyframes page-head-zoom {
-  from { transform: scale(1.14); }
-  to   { transform: scale(1.02); }
+  from { transform: scale(1.1); }
+  to   { transform: scale(1.0); }
 }
 @media (prefers-reduced-motion: reduce) {
   .page-head__media { animation: none; transform: none; }
@@ -1031,9 +1031,9 @@ section { padding-top: var(--section-y); padding-bottom: var(--section-y); posit
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(65% 80% at 15% 25%, rgba(180, 58, 46, 0.22), transparent 60%),
-    linear-gradient(90deg, rgba(10,14,20,0.88) 0%, rgba(10,14,20,0.55) 50%, rgba(10,14,20,0.4) 100%),
-    linear-gradient(180deg, rgba(10,14,20,0.4) 0%, rgba(10,14,20,0.55) 55%, var(--bg) 100%);
+    radial-gradient(55% 70% at 12% 30%, rgba(180, 58, 46, 0.28), transparent 55%),
+    linear-gradient(90deg, rgba(10,14,20,0.78) 0%, rgba(10,14,20,0.35) 45%, rgba(10,14,20,0.05) 75%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, transparent 60%, rgba(10,14,20,0.9) 100%);
 }
 .page-head > .container { position: relative; z-index: 1; }
 .page-head__eyebrow { margin-bottom: 24px; }
