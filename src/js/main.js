@@ -23,6 +23,12 @@ ready(() => {
     import("./hero-mesh.js").then(({ initHeroMesh }) => initHeroMesh(canvas));
   }
 
+  // Harmony orb (right-side hero visual)
+  const orbCanvas = document.querySelector("[data-harmony-orb]");
+  if (orbCanvas) {
+    import("./harmony-orb.js").then(({ initHarmonyOrb }) => initHarmonyOrb(orbCanvas));
+  }
+
   // Body fade in
   requestAnimationFrame(() => document.body.classList.add("is-ready"));
 });
