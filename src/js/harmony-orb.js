@@ -4,10 +4,10 @@ export function initHarmonyOrb(canvas) {
   if (!canvas) return;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const parent = canvas.parentElement;
   const getSize = () => {
-    const rect = parent.getBoundingClientRect();
-    return { w: Math.max(rect.width, 1), h: Math.max(rect.height, 1) };
+    const rect = canvas.getBoundingClientRect();
+    const s = Math.max(Math.min(rect.width, rect.height), 1);
+    return { w: s, h: s };
   };
 
   const renderer = new THREE.WebGLRenderer({
@@ -145,7 +145,7 @@ export function initHarmonyOrb(canvas) {
   };
   resize();
   const ro = new ResizeObserver(resize);
-  ro.observe(parent);
+  ro.observe(canvas);
 
   // --- Animation loop ---
   const clock = new THREE.Clock();

@@ -3121,9 +3121,12 @@ body.is-ready { opacity: 1; }
 }
 .hero__visual-canvas {
   position: absolute;
-  inset: -20%;
+  top: 50%;
+  left: 50%;
   width: 140%;
-  height: 140%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  transform: translate(-50%, -50%);
   display: block;
 }
 .hero__visual-meta {
