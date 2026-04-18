@@ -22,7 +22,7 @@ export function initHarmonyOrb(canvas) {
   const scene = new THREE.Scene();
   const { w, h } = getSize();
   const camera = new THREE.PerspectiveCamera(42, w / h, 0.1, 100);
-  camera.position.set(0, 0, 6.2);
+  camera.position.set(0, 0, 8.0);
   camera.lookAt(0, 0, 0);
 
   const group = new THREE.Group();
